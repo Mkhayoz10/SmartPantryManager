@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFDF7"
+    tools:context=".AddIngredientActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Top area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#E7F5EC"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="#177245"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD TO PANTRY"
+                    android:textColor="#177245"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Add an ingredient"
+                    android:textColor="#17251E"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Illustration -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="#FFF0A8"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥕  🍅  🥦  🥑"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="Keep it fresh. Keep it organised."
+                    android:textColor="#17251E"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ingredient name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="Ingredient name"
+            android:textColor="#17251E"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etIngredientName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#177245"
+            android:hint="e.g. Tomatoes"
+            android:inputType="textCapSentences"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#17251E"
+            android:textColorHint="#87938C"
+            android:textSize="15sp" />
+
+        <!-- Quantity + Unit -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:textColor="#17251E"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#177245"
+                    android:hint="e.g. 2"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="16dp"
+                    android:textColor="#17251E"
+                    android:textColorHint="#87938C"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="14dp"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unit"
+                    android:textColor="#17251E"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Expiry date -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Expiry date"
+            android:textColor="#17251E"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etExpiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#177245"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Select expiry date"
+            android:paddingStart="16dp"
+            android:textColor="#17251E"
+            android:textColorHint="#87938C"
+            android:textSize="15sp" />
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/btnSaveIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#177245"
+            android:text="✓  Save Ingredient"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="You can edit or remove ingredients later."
+            android:textColor="#7B8981"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>

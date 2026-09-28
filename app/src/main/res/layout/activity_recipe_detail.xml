@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFDF7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/btnBackRecipeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back to recipes"
+            android:textColor="#177245"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="RECIPE"
+            android:textColor="#177245"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08" />
+
+        <TextView
+            android:id="@+id/tvDetailRecipeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tomato Omelette"
+            android:textColor="#17251E"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="INGREDIENTS"
+            android:textColor="#177245"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:id="@+id/tvDetailIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:text="• 2 pieces tomatoes&#10;• 2 pieces eggs"
+                android:textColor="#374740"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PREPARATION"
+            android:textColor="#177245"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp">
+
+            <TextView
+                android:id="@+id/tvDetailMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:text="Beat the eggs. Add tomatoes and seasoning. Cook in a pan until the eggs are set."
+                android:textColor="#374740"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6dp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
